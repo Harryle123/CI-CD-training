@@ -1,24 +1,40 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Ruby version
 
-Things you may want to cover:
+- 3.1.2
 
-* Ruby version
+## Rails version
+- 7.0.4
 
-* System dependencies
+## Requirements
 
-* Configuration
+- Docker
+- docker-compose
 
-* Database creation
+## Initial Setup
 
-* Database initialization
+```bash
+$ docker-compose build
+$ docker-compose run web rails db:create
+```
 
-* How to run the test suite
+## How to Develop
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+$ docker-compose up
+```
 
-* Deployment instructions
+You can access `http://localhost:3000`.
 
-* ...
+## How to run the rails commands
+
+```bash
+$ docker-compose run web xxx
+```
+
+## After update Gemfile
+
+```bash
+$ docker-compose build
+```
