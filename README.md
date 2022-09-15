@@ -1,24 +1,43 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Ruby version
 
-Things you may want to cover:
+- 3.0.4
 
-* Ruby version
+## Rails version
+- 6.1.7
 
-* System dependencies
+## Requirements
 
-* Configuration
+- docker
+- docker-compose
 
-* Database creation
+## Initial Setup
 
-* Database initialization
+1. Change data of ```DATABASE_USER```, ```DATABASE_PASSWORD``` in ```.env``` to match your DB
+2. Run command
 
-* How to run the test suite
+```bash
+$ docker compose build
+$ docker compose run web rails db:create
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## How to Develop
 
-* Deployment instructions
+```bash
+$ docker compose up
+```
 
-* ...
+You can access `http://localhost:3000`.
+
+## How to run the rails commands
+
+```bash
+$ docker compose run web xxx
+```
+
+## After update Gemfile or change setting file
+
+```bash
+$ docker compose build
+```
